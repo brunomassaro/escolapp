@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cursos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  
+  <ion-card ion-item *ngFor="let user of users" (click)="itemTapped(user.id)" >
+    <img src="https://robohash.org/{{user.id}}?bgset=bg1"/>
+    <div class="card-title">{{ user.first_name }} {{ user.last_name }}</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>
+
+</ion-content>
+
